@@ -22,7 +22,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: server
-        image: manojkrishnappa/authservice:da00dfa0ad1945085f3fa031f0491f08b8dfa6a5
+        image: 508262720940.dkr.ecr.us-west-2.amazonaws.com/authservice:v1
         ports:
         - containerPort: 8081
         securityContext:
@@ -44,6 +44,38 @@ spec:
         env:
         - name: PORT
           value: "8081"
+        - name: DB_SSLMODE
+          value: "require"
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: DB_HOST
+        - name: DB_PORT
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: DB_PORT
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: DB_NAME
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: DB_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: DB_PASSWORD
+        - name: JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: authservice-db
+              key: JWT_SECRET_KEY
         resources:
           requests:
             cpu: 50m
