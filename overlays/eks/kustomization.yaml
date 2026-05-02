@@ -24,8 +24,6 @@ images:
     newTag: "1"
   - name: manojkrishnappa/checkoutservice
     newTag: "1"
-  - name: manojkrishnappa/currencyservice
-    newTag: "1"
   - name: manojkrishnappa/emailservice
     newTag: "1"
   - name: manojkrishnappa/frontend

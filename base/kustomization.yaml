@@ -10,8 +10,6 @@ resources:
   - cartservice/service.yaml
   - checkoutservice/deployment.yaml
   - checkoutservice/service.yaml
-  - currencyservice/deployment.yaml
-  - currencyservice/service.yaml
   - emailservice/deployment.yaml
   - emailservice/service.yaml
   - frontend/deployment.yaml

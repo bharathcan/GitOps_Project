@@ -6,7 +6,6 @@ resources:
   - authservice/app.yaml
   - cartservice/app.yaml
   - checkoutservice/app.yaml
-  - currencyservice/app.yaml
   - emailservice/app.yaml
   - frontend/app.yaml
   - loadgenerator/app.yaml
